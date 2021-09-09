@@ -27,7 +27,7 @@ class WhatsAppBtn {
 
         // Add CSS
         let styles = document.createElement('link')
-        styles.setAttribute('href', 'css/jam-whatsapp-button.css')
+        styles.setAttribute('href', 'https://cdn.jsdelivr.net/gh/javimata/whatsapp-widget@1.0.0/css/jam-whatsapp-button.css')
         styles.setAttribute('rel', 'stylesheet')
         styles.setAttribute('type', 'text/css')
         styles.setAttribute('style', `background:${this.backgroundColor}`)
