@@ -83,10 +83,12 @@ class WhatsAppBtn {
 
             if ( typeof gtag == 'function' && ga[0] ) {
                 gtag('event', ga[1], { 'event_category': ga[0], 'event_label': ga[2] });
+                console.log("push GA event " + ga[2])
             }
 
             if (typeof fbq == 'function' && fb[0]) {
                 fbq('track', fb[0], { content_name: fb[1] });
+                console.log("push FB event " + fb[1])
             }
 
         });
