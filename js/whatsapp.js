@@ -74,20 +74,18 @@ class WhatsAppBtn {
         iconPath.setAttribute('fill', colorIcon)
         svg.appendChild(iconPath);
 
-        console.log( ga[1] );
+        let ga = this.ga;
+        let fb = this.fb;
 
         let link_whatsapp = document.querySelector('.jam_whatsapp a.link_whatsapp');
         link_whatsapp.addEventListener('click', function(){
             
-            let ga = this.ga;
-            let fb = this.fb;
-
-            if ( typeof gtag == 'function' && ga[0] ) {
+            if ( ga[0] ) {
                 gtag('event', ga[1], { 'event_category': ga[0], 'event_label': ga[2] });
                 console.log("push GA event " + ga[2]);
             }
 
-            if (typeof fbq == 'function' && fb[0]) {
+            if ( fb[0] ) {
                 fbq('track', fb[0], { content_name: fb[1] });
                 console.log("push FB event " + fb[1]);
             }
