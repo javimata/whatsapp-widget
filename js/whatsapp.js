@@ -1,16 +1,16 @@
 class WhatsAppBtn {
 
     constructor({ phone, text, backgroundColor, callTo, iconColor, position, positionText, width, ga, fb}) {
-        this.phone           = phone
+        this.phone           = phone;
         this.text            = text ? text : "";
         this.backgroundColor = backgroundColor ? backgroundColor : "#4DC247";
-        this.callTo          = callTo
-        this.iconColor       = iconColor ? iconColor : "#fff"
+        this.callTo          = callTo;
+        this.iconColor       = iconColor ? iconColor : "#fff";
         this.positionText    = positionText ? positionText : "tl";
         this.position        = position ? position : "rb";
         this.width           = width ? width : "60";
-        this.ga              = ga
-        this.fb              = fb
+        this.ga              = ga;
+        this.fb              = fb;
     }
 
     renderButton() {
@@ -74,21 +74,22 @@ class WhatsAppBtn {
         iconPath.setAttribute('fill', colorIcon)
         svg.appendChild(iconPath);
 
+        console.log( ga[1] );
 
         let link_whatsapp = document.querySelector('.jam_whatsapp a.link_whatsapp');
         link_whatsapp.addEventListener('click', function(){
             
-            let ga = this.ga
-            let fb = this.fb
+            let ga = this.ga;
+            let fb = this.fb;
 
             if ( typeof gtag == 'function' && ga[0] ) {
                 gtag('event', ga[1], { 'event_category': ga[0], 'event_label': ga[2] });
-                console.log("push GA event " + ga[2])
+                console.log("push GA event " + ga[2]);
             }
 
             if (typeof fbq == 'function' && fb[0]) {
                 fbq('track', fb[0], { content_name: fb[1] });
-                console.log("push FB event " + fb[1])
+                console.log("push FB event " + fb[1]);
             }
 
         });
