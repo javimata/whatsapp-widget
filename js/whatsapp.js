@@ -1,6 +1,6 @@
 class WhatsAppBtn {
 
-    constructor({ phone, text, backgroundColor, callTo, iconColor, position, positionText, width, ga, fb}) {
+    constructor({ phone, text, backgroundColor, callTo, iconColor, position, positionText, width, ga, fb, pi}) {
         this.phone           = phone;
         this.text            = text ? text : "";
         this.backgroundColor = backgroundColor ? backgroundColor : "#4DC247";
@@ -11,6 +11,7 @@ class WhatsAppBtn {
         this.width           = width ? width : "60";
         this.ga              = ga;
         this.fb              = fb;
+        this.pi              = pi;
     }
 
     renderButton() {
@@ -27,7 +28,7 @@ class WhatsAppBtn {
 
         // Add CSS
         let styles = document.createElement('link')
-        styles.setAttribute('href', 'https://cdn.jsdelivr.net/gh/javimata/whatsapp-widget@1.0.2/css/jam-whatsapp-button.css')
+        styles.setAttribute('href', 'https://cdn.jsdelivr.net/gh/javimata/whatsapp-widget@1.0.3/css/jam-whatsapp-button.css')
         styles.setAttribute('rel', 'stylesheet')
         styles.setAttribute('type', 'text/css')
         styles.setAttribute('style', `background:${this.backgroundColor}`)
@@ -76,6 +77,7 @@ class WhatsAppBtn {
 
         let ga = this.ga;
         let fb = this.fb;
+        let pi = this.pi;
 
         let link_whatsapp = document.querySelector('.jam_whatsapp a.link_whatsapp');
         link_whatsapp.addEventListener('click', function(){
@@ -88,6 +90,11 @@ class WhatsAppBtn {
             if ( fb[0] ) {
                 fbq('track', fb[0], { content_name: fb[1] });
                 console.log("push FB event " + fb[1]);
+            }
+
+            if (pi[0]) {
+                pintrk('track', pi[0], { lead_type: pi[1] });
+                console.log("push Pinteres event " + pi[1]);
             }
 
         });
