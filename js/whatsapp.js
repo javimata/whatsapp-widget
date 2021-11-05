@@ -82,19 +82,35 @@ class WhatsAppBtn {
         let link_whatsapp = document.querySelector('.jam_whatsapp a.link_whatsapp');
         link_whatsapp.addEventListener('click', function(){
             
-            if ( ga[0] ) {
-                gtag('event', ga[1], { 'event_category': ga[0], 'event_label': ga[2] });
-                console.log("push GA event " + ga[2]);
+            if ( ga[0] != undefined ) {                
+
+                if (typeof gtag == 'function') {
+                    gtag('event', ga[1], { 'event_category': ga[0], 'event_label': ga[2] });
+                    console.log("push GTAG event " + ga[2]);
+                } else if (typeof ga == 'function') {
+                    ga('send', 'event', ga[0], ga[1], ga[2]);
+                    console.log("push GA event " + ga[2]);
+                } else {
+                    console.log("No GA install or detected");
+                };
             }
 
-            if ( fb[0] ) {
-                fbq('track', fb[0], { content_name: fb[1] });
-                console.log("push FB event " + fb[1]);
+            if ( fb[0] != undefined ) {
+                if (typeof fbq == 'function') {
+                    fbq('track', fb[0], { content_name: fb[1] });
+                    console.log("push FB event " + fb[1]);
+                } else {
+                    console.log("No Pixel install or detected");
+                };
             }
 
-            if (pi[0]) {
-                pintrk('track', pi[0], { lead_type: pi[1] });
-                console.log("push Pinteres event " + pi[1]);
+            if ( pi[0] != undefined ) {
+                if (typeof pintrk == 'function') {
+                    pintrk('track', pi[0], { lead_type: pi[1] });
+                    console.log("push Pinteres event " + pi[1]);
+                } else {
+                    console.log('No Pinterest Pixel detected');
+                }
             }
 
         });
