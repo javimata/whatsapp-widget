@@ -1,6 +1,6 @@
 class WhatsAppBtn {
 
-    constructor({ phone, text, backgroundColor, callTo, iconColor, position, positionText, width, ga, fb, pi}) {
+    constructor({ phone, text, backgroundColor, callTo, iconColor, position, positionText, style, width, ga, fb, pi}) {
         this.phone           = phone;
         this.text            = text ? text : "";
         this.backgroundColor = backgroundColor ? backgroundColor : "#4DC247";
@@ -8,6 +8,7 @@ class WhatsAppBtn {
         this.iconColor       = iconColor ? iconColor : "#fff";
         this.positionText    = positionText ? positionText : "tl";
         this.position        = position ? position : "rb";
+        this.style           = style ? style : "";
         this.width           = width ? width : "60";
         this.ga              = ga;
         this.fb              = fb;
@@ -24,11 +25,16 @@ class WhatsAppBtn {
         root.className = 'jam_whatsapp'
         root.classList.add(this.position)
         root.classList.add(this.positionText)
+
+        if ( this.style != undefined ) {
+            root.setAttribute('style', this.style);
+        }
+
         document.body.appendChild(root);
 
         // Add CSS
         let styles = document.createElement('link')
-        styles.setAttribute('href', 'https://cdn.jsdelivr.net/gh/javimata/whatsapp-widget@1.0.4/css/jam-whatsapp-button.css')
+        styles.setAttribute('href', 'https://cdn.jsdelivr.net/gh/javimata/whatsapp-widget@1.0.5/css/jam-whatsapp-button.css')
         styles.setAttribute('rel', 'stylesheet')
         styles.setAttribute('type', 'text/css')
         styles.setAttribute('style', `background:${this.backgroundColor}`)

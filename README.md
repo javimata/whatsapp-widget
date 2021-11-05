@@ -3,9 +3,9 @@
 
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/javimata/whatsapp-widget@1.0.4/js/whatsapp.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/javimata/whatsapp-widget@1.0.5/js/whatsapp.js"></script>
 <script>
-var whatsAppBtn = new WhatsAppBtn({ phone: "12345678910", text: "Hi, i wanna contact us", iconColor: '#fff', backgroundColor: "#4DC247", callTo: "👋🏼 Contac us", positionText: "tl", position: "rb", width: "60", ga:['phone','click','whatsapp'], fb:['Contact','Whatsapp'], pi:['Custom','Whatsapp']});
+var whatsAppBtn = new WhatsAppBtn({ phone: "12345678910", text: "Hi, i wanna contact us", iconColor: '#fff', backgroundColor: "#4DC247", callTo: "👋🏼 Contac us", positionText: "tl", position: "rb", style: "bottom:80px", width: "60", ga:['phone','click','whatsapp'], fb:['Contact','Whatsapp'], pi:['Custom','Whatsapp']});
 whatsAppBtn.renderButton()
 </script>
 ```
@@ -20,6 +20,7 @@ backgroundColor| string | #4DC247 | no | Color for the icon background
 callTo | string | Null | no | Text to show with the icon
 positionText | string | tl | no | Position of text, check values list
 position| string | rb | no | Position of the icon, check value list
+style | string | Null | no | Add css styles, example: "bottom:100px;"
 width | string | 60 | no | Width of the icon
 ga| array | Null | no | Create a Google Analytics event with a array with Label, Category and type, see example
 fb| array | Null | no | Create a FB Pixel event with a array with Type and label, see example

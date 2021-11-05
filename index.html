@@ -20,8 +20,11 @@
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
         crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/gh/javimata/whatsapp-widget@1.0.1/js/whatsapp.js"></script>
-    <script> var whatsAppBtn = new WhatsAppBtn({ phone: "523335552173", text: "Hola, quisiera conocer detalles y resolver dudas de un producto", iconColor: '#fff', backgroundColor: "#4DC247", callTo: "👋🏼 Escríbenos", positionText: "tl", position: "rb", width: "60", ga:['telefono','click','whatsapp'], fb:['Contact','Whatsapp']}); whatsAppBtn.renderButton()</script>
+    <script src="js/whatsapp.js"></script>
+    <script>
+        var whatsAppBtn = new WhatsAppBtn({ phone: "12345678910", text: "Hi, i wanna contact us", iconColor: '#fff', backgroundColor: "#4DC247", callTo: "👋🏼 Contac us", positionText: "tl", position: "rb", style: "bottom:120px", width: "60", ga: ['phone', 'click', 'whatsapp'], fb: ['Contact', 'Whatsapp'], pi: ['Custom', 'Whatsapp'] });
+        whatsAppBtn.renderButton()
+    </script>
 
 </body>
 
