@@ -3,7 +3,7 @@
 
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/javimata/whatsapp-widget@1.0.6/js/whatsapp.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/javimata/whatsapp-widget@1.0.6/assets/js/whatsapp.js"></script>
 <script>
 var whatsAppBtn = new WhatsAppBtn({ phone: "12345678910", phones["Sales:0123456789","Support:0987654321"], text: "Hi, i wanna contact us", iconColor: '#fff', backgroundColor: "#4DC247", callTo: "👋🏼 Contact us", positionText: "tl", position: "rb", style: "bottom:80px", width: "60", ga:['phone','click','whatsapp'], fb:['Contact','Whatsapp'], pi:['Custom','Whatsapp']});
 whatsAppBtn.renderButton()
