@@ -3,9 +3,9 @@
 
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/javimata/whatsapp-widget@1.0.5/js/whatsapp.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/javimata/whatsapp-widget@1.0.6/js/whatsapp.js"></script>
 <script>
-var whatsAppBtn = new WhatsAppBtn({ phone: "12345678910", text: "Hi, i wanna contact us", iconColor: '#fff', backgroundColor: "#4DC247", callTo: "👋🏼 Contac us", positionText: "tl", position: "rb", style: "bottom:80px", width: "60", ga:['phone','click','whatsapp'], fb:['Contact','Whatsapp'], pi:['Custom','Whatsapp']});
+var whatsAppBtn = new WhatsAppBtn({ phone: "12345678910", phones["Sales:0123456789","Support:0987654321"], text: "Hi, i wanna contact us", iconColor: '#fff', backgroundColor: "#4DC247", callTo: "👋🏼 Contact us", positionText: "tl", position: "rb", style: "bottom:80px", width: "60", ga:['phone','click','whatsapp'], fb:['Contact','Whatsapp'], pi:['Custom','Whatsapp']});
 whatsAppBtn.renderButton()
 </script>
 ```
@@ -14,6 +14,7 @@ whatsAppBtn.renderButton()
 Name|Value type| Default | Required | Description
 -|:-:|:-:|:-:|-
 phone| string | Null | yes | Number of whatsapp including country code
+phones| array | Null | no | Allow add more that one number and a name, some like phones:["Sales:0123456789","Support:0987654321"]
 text| string | Null | no | Text to include with prefill in the chat
 iconColor| string | #fff | no | Color in RGB for the icon
 backgroundColor| string | #4DC247 | no | Color for the icon background
