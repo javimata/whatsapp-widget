@@ -15,7 +15,7 @@ Name|Value type| Default | Required | Description
 -|:-:|:-:|:-:|-
 phone| string | Null | yes | Number of whatsapp including country code
 phones| array | Null | no | Allow add more that one number and a name, some like phones:["Sales:0123456789","Support:0987654321"]
-text| string | Null | no | Text to include with prefill in the chat, if add [url] this will be replace with the actual url
+text| string | Null | no | Text to include with prefill in the chat, if add <strong>[url]</strong> inside the text this will be replace with the actual url
 iconColor| string | #fff | no | Color in RGB for the icon
 backgroundColor| string | #4DC247 | no | Color for the icon background
 callTo | string | Null | no | Text to show with the icon
@@ -50,7 +50,12 @@ rb| Right Bottom
 
 ### <strong>Themes option</strong>
 Can add a custom theme or pre defined themes adding a css link after the code, example:<br>
-```<link href="assets/css/theme-light-whatsapp.min.css" rel="stylesheet">```
+```<link href="https://cdn.jsdelivr.net/gh/javimata/whatsapp-widget@1.0.9/assets/css/theme-light-whatsapp.min.css" rel="stylesheet">```
+
+Actual themes:  
+theme-light-whatsapp.min.css  
+theme-dark-whatsapp.min.css  
+theme-modern-whatsapp.min.css
 
 <br>  
 
