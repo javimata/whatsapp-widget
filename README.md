@@ -60,6 +60,6 @@ theme-modern-whatsapp.min.css
 <br>  
 
 ### <strong>Changelog</strong>  
-1.0.9 - Add Themes & fix bugs
-1.0.8 - Fix events & single phone error in number<br>
-1.0.7 - Add Multinumbers type chat options
+- 1.0.9 - Add Themes & fix bugs
+- 1.0.8 - Fix events & single phone error in number
+- 1.0.7 - Add Multinumbers type chat options
