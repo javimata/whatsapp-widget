@@ -24,6 +24,7 @@ position| string | rb | no | Position of the icon, check value list
 style | string | Null | no | Add css styles, example: "bottom:100px;"
 width | string | 60 | no | Width of the icon
 delay | number | 1 | no | Add a delay in seconds to show the icon
+delayText | number | 0 | no | Add a delay in seconds to show the Text bubble
 ga| array | Null | no | Create a Google Analytics event with a array with Label, Category and type, see example
 fb| array | Null | no | Create a FB Pixel event with a array with Type and label, see example
 pi| array | Null | no | Create a Pinterest event with a array with Type and label, see example
