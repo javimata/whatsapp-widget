@@ -62,6 +62,7 @@ theme-modern-whatsapp.min.css
 <br>  
 
 ### <strong>Changelog</strong>  
+- 1.1.0 - Add delay to window.load and delay controls
 - 1.0.9 - Add Themes & fix bugs
 - 1.0.8 - Fix events & single phone error in number
 - 1.0.7 - Add Multinumbers type chat options
