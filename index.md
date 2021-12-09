@@ -1,37 +1,67 @@
-## Welcome to GitHub Pages
+# Ultra light Whatsapp widget
+## Using svg
 
-You can use the [editor on GitHub](https://github.com/javimata/whatsapp-widget/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```html
+<script src="https://cdn.jsdelivr.net/gh/javimata/whatsapp-widget@1.1.0/assets/js/whatsapp.js"></script>
+<script>
+var whatsAppBtn = new WhatsAppBtn({ phone: "12345678910", phones:["Sales:0123456789","Support:0987654321"], text: "Hi, i wanna contact us", iconColor: '#fff', backgroundColor: "#4DC247", callTo: "👋🏼 Contact us", positionText: "tl", position: "rb", style: "bottom:80px", width: "60", ga:['phone','click','whatsapp'], fb:['Contact','Whatsapp'], pi:['Custom','Whatsapp']});
+whatsAppBtn.renderButton()
+</script>
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+### <strong>Parameters</strong>
+Name|Value type| Default | Required | Description
+-|:-:|:-:|:-:|-
+phone| string | Null | yes | Number of whatsapp including country code
+phones| array | Null | no | Allow add more that one number and a name, some like phones:["Sales:0123456789","Support:0987654321"]
+text| string | Null | no | Text to include with prefill in the chat, if add <strong>[url]</strong> inside the text this will be replace with the actual url
+iconColor| string | #fff | no | Color in RGB for the icon
+backgroundColor| string | #4DC247 | no | Color for the icon background
+callTo | string | Null | no | Text to show with the icon
+positionText | string | tl | no | Position of text, check values list
+position| string | rb | no | Position of the icon, check value list
+style | string | Null | no | Add css styles, example: "bottom:100px;"
+width | string | 60 | no | Width of the icon
+delay | number | 1 | no | Add a delay in seconds to show the icon
+delayText | number | 0 | no | Add a delay in seconds to show the Text bubble
+ga| array | Null | no | Create a Google Analytics event with a array with Label, Category and type, see example
+fb| array | Null | no | Create a FB Pixel event with a array with Type and label, see example
+pi| array | Null | no | Create a Pinterest event with a array with Type and label, see example
 
-### Jekyll Themes
+  
+### <strong>positionText</strong> values
+Text|Result
+:-:|-
+tt| Text in top of icon
+tl| Text in left of icon
+tr| Text in right of icon
+tb| Text in bottom of icon
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/javimata/whatsapp-widget/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### <strong>position</strong> values
+Text|Result
+:-:|-
+lt| Left Top
+lc| Left Center
+lb| Left Bottom
+rt| Right Top
+rc| Right Center
+rb| Right Bottom
 
-### Support or Contact
+<br>  
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### <strong>Themes option</strong>
+Can add a custom theme or pre defined themes adding a css link after the code, example:<br>
+```<link href="https://cdn.jsdelivr.net/gh/javimata/whatsapp-widget@1.1.0/assets/css/theme-light-whatsapp.min.css" rel="stylesheet">```
+
+Actual themes:  
+theme-light-whatsapp.min.css  
+theme-dark-whatsapp.min.css  
+theme-modern-whatsapp.min.css
+
+<br>  
+
+### <strong>Changelog</strong>  
+- 1.0.9 - Add Themes & fix bugs
+- 1.0.8 - Fix events & single phone error in number
+- 1.0.7 - Add Multinumbers type chat options
