@@ -3,3 +3,4 @@ dist
 gulpfile.js
 .vscode
 node_modules
+assets/sounds

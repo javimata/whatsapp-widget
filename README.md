@@ -10,6 +10,16 @@ whatsAppBtn.renderButton()
 </script>
 ```
 
+### The most simple use
+```html
+<script src="https://cdn.jsdelivr.net/gh/javimata/whatsapp-widget@latest/assets/js/whatsapp.js"></script>
+<script>
+var whatsAppBtn = new WhatsAppBtn({ phone: "12345678910" });
+whatsAppBtn.renderButton()
+</script>
+```
+
+
 ### <strong>Parameters</strong>
 Name|Value type| Default | Required | Description
 -|:-:|:-:|:-:|-
