@@ -3,7 +3,7 @@
 
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/javimata/whatsapp-widget@1.1.0/assets/js/whatsapp.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/javimata/whatsapp-widget@1.1.1/assets/js/whatsapp.js"></script>
 <script>
 var whatsAppBtn = new WhatsAppBtn({ phone: "12345678910", phones:["Sales:0123456789","Support:0987654321"], text: "Hi, i wanna contact us", iconColor: '#fff', backgroundColor: "#4DC247", callTo: "👋🏼 Contact us", positionText: "tl", position: "rb", style: "bottom:80px", width: "60", ga:['phone','click','whatsapp'], fb:['Contact','Whatsapp'], pi:['Custom','Whatsapp']});
 whatsAppBtn.renderButton()
@@ -33,8 +33,6 @@ positionText | string | tl | no | Position of text, check values list
 position| string | rb | no | Position of the icon, check value list
 style | string | Null | no | Add css styles, example: "bottom:100px;"
 width | string | 60 | no | Width of the icon
-delay | number | 1 | no | Add a delay in seconds to show the icon
-delayText | number | 0 | no | Add a delay in seconds to show the Text bubble
 ga| array | Null | no | Create a Google Analytics event with a array with Label, Category and type, see example
 fb| array | Null | no | Create a FB Pixel event with a array with Type and label, see example
 pi| array | Null | no | Create a Pinterest event with a array with Type and label, see example
@@ -72,6 +70,7 @@ theme-modern-whatsapp.min.css
 <br>  
 
 ### <strong>Changelog</strong>  
+- 1.1.1 - Remove delay option and fix some errors
 - 1.1.0 - Add delay to window.load and delay controls
 - 1.0.9 - Add Themes & fix bugs
 - 1.0.8 - Fix events & single phone error in number
