@@ -1,9 +1,9 @@
 # Ultra light Whatsapp widget
-## Using svg
+## Using svg image
 
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/javimata/whatsapp-widget@1.1.3/assets/js/whatsapp.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/javimata/whatsapp-widget@1.1.4/assets/js/whatsapp.js"></script>
 <script>
 var whatsAppBtn = new WhatsAppBtn({ phone: "12345678910", phones:["Sales:0123456789","Support:0987654321"], text: "Hi, i wanna contact us", iconColor: '#fff', backgroundColor: "#4DC247", callTo: "👋🏼 Contact us", positionText: "tl", position: "rb", style: "bottom:80px", width: "60", ga:['phone','click','whatsapp'], fb:['Contact','Whatsapp'], pi:['Custom','Whatsapp']});
 whatsAppBtn.renderButton()
@@ -12,7 +12,7 @@ whatsAppBtn.renderButton()
 
 ### The most simple use
 ```html
-<script src="https://cdn.jsdelivr.net/gh/javimata/whatsapp-widget@1.1.3/assets/js/whatsapp.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/javimata/whatsapp-widget@1.1.4/assets/js/whatsapp.js"></script>
 <script>
 var whatsAppBtn = new WhatsAppBtn({ phone: "12345678910" });
 whatsAppBtn.renderButton()
@@ -70,6 +70,7 @@ theme-modern-whatsapp.min.css
 <br>  
 
 ### <strong>Changelog</strong>  
+- 1.1.4 - Fix some errors
 - 1.1.3 - Fix some errors
 - 1.1.2 - Fix some errors
 - 1.1.1 - Remove delay option and fix some errors
