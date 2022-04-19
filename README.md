@@ -1,5 +1,5 @@
 # Ultra light Whatsapp widget
-## Using svg
+## Using svg image
 
 
 ```html
